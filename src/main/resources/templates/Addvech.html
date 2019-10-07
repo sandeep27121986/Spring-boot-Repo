@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save Vechical</title>
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h3>Vechical Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Vechical Employee</p>
+	
+		<form action="#" th:action="@{/Vechical/save}"
+						 th:object="${VECHICALDATA}" method="POST">
+			<input type="text" th:field="*{id}"
+					class="form-control mb-2 col-2" placeholder="id">
+
+			<input type="text" th:field="*{vname}"
+					class="form-control mb-2 col-2" placeholder="vname">
+            <input type="text" th:field="*{desc}"
+					class="form-control mb-2 col-2" placeholder="desc">
+			<input type="text" th:field="*{status}"
+					class="form-control mb-2 col-2" placeholder="status">
+				
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/Vechical/list}">Back to Employees List</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
